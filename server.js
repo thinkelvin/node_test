@@ -11,8 +11,8 @@ app.get('/', function(req, res){
 console.log("my socket server is running at port:3000");
 
 var socket = require('socket.io');
-var io = socket(server);
-io.socket.on('connection', newConnection);
+var io = socketIO(server);
+io.on('connection', newConnection);
 
 function newConnection(socket){
     console.log('new connection:'+socket.id);
