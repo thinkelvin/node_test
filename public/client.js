@@ -14,6 +14,6 @@ function draw() {
 }
 
 function byeSocket() {
-  socket.disconnect();
-
+  socket.close();
+  console.log('close socket');
 }
