@@ -7,10 +7,16 @@ function setup() {
 
 function draw() {
   background(220);
-  fill(0,255,0);
+  // fill(0,255,0);
+  // noStroke();
+  // rectMode(CENTER);
+  // rect(200,200,100,100);
+}
+
+function mouseDragged() {
   noStroke();
-  rectMode(CENTER);
-  rect(200,200,100,100);
+  fill(255);
+  ellipse(mouseX, mouseY, 40,40);
 }
 
 window.addEventListener('beforeunload', (event) => {
