@@ -2,7 +2,7 @@ var socket;
 
 function setup() {
   createCanvas(400, 400);
-  socket = io.();
+  socket = io.connect('http://localhost');
 }
 
 function draw() {
