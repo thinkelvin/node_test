@@ -12,3 +12,8 @@ function draw() {
   rectMode(CENTER);
   rect(200,200,100,100);
 }
+
+function byeSocket() {
+  socket.disconnect();
+
+}

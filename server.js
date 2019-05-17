@@ -17,3 +17,8 @@ io.on('connection', newConnection);
 function newConnection(socket){
     console.log('new connection:'+socket.id);
 }
+
+io.on('disconnect', byeConnection);
+function byeConnection(socket){
+    console.log('client disconnected');
+}
