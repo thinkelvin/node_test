@@ -2,11 +2,12 @@ var socket;
 
 function setup() {
   createCanvas(400, 400);
+  background(220);
   socket = io.connect('https://thinkelvin-node-test.herokuapp.com/');
 }
 
 function draw() {
-  background(220);
+  
   // fill(0,255,0);
   // noStroke();
   // rectMode(CENTER);
