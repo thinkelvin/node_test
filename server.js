@@ -16,10 +16,15 @@ io.on('connection', newConnection);
 
 function newConnection(socket){
     console.log('new connection:'+socket.id);
+    socket.on('disconnect', byeConnection);
+    function byeConnection(socket){
+        console.log('client disconnected:'+ socket.id);
+    }
+    socket.on('mouse', mouseMsg);
+    function mouseMsg(data) {
+        socket.broadcast.emit('mouse', data);
+    }
 }
 
-io.on('disconnect', byeConnection);
 
-function byeConnection(socket){
-    console.log('client disconnected:'+ socket.id);
-}
+
