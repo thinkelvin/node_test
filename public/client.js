@@ -13,7 +13,6 @@ function draw() {
   rect(200,200,100,100);
 }
 
-function byeSocket() {
+window.addEventListener('beforeunload', (event) => {
   io.close();
-  console.log('close socket');
-}
+});
