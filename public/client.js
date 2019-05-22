@@ -25,7 +25,7 @@ function mouseDragged() {
   var data = {
     x: mouseX,
     y: mouseY
-  }
+  };
   socket.emit('mouse', data);
 
   noStroke();
@@ -33,6 +33,4 @@ function mouseDragged() {
   ellipse(mouseX, mouseY, 40,40);
 }
 
-window.addEventListener('beforeunload', (event) => {
-  io.close();
-});
+
