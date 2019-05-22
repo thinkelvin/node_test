@@ -3,7 +3,8 @@ var socket;
 function setup() {
   createCanvas(400, 400);
   background(220);
-  socket = io.connect('https://thinkelvin-node-test.herokuapp.com/');
+  //socket = io.connect('https://thinkelvin-node-test.herokuapp.com/');
+  socket = io();
   socket.on('mouse', newDraw);
 }
 
