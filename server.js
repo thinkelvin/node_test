@@ -22,7 +22,7 @@ function newConnection(socket){
     }
     socket.on('mouse', mouseMsg);
     function mouseMsg(data) {
-        socket.broadcast.emit('mouse', data);
+        socket.broadcast.emit('mouse', data); // this will send to all connected clients except the server itself
     }
 }
 

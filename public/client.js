@@ -4,7 +4,7 @@ function setup() {
   createCanvas(400, 400);
   background(220);
   //socket = io.connect('https://thinkelvin-node-test.herokuapp.com/');
-  socket = io();
+  socket = io(); // will connect to the host which serves this page
   socket.on('mouse', newDraw);
 }
 
@@ -27,7 +27,7 @@ function mouseDragged() {
     x: mouseX,
     y: mouseY
   };
-  socket.emit('mouse', data);
+  socket.emit('mouse', data); // this message only sends back to the server but not every connected clients
 
   noStroke();
   fill(255);
